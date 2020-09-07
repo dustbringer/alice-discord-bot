@@ -20,5 +20,5 @@ class BasicCog(commands.Cog):
         self.bot = bot
 
     @commands.command('bruh')
-    async def hello(self, ctx):
+    async def bruh(self, ctx):
         await ctx.send("Bruhhhh")

@@ -15,7 +15,9 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 ext = [
     'cogs.basic',
-    'cogs.santa'
+    'cogs.copypasta',
+    'cogs.santa',
+    'cogs.sample_listener'
 ]
 
 def set_cogs(bot):
@@ -61,9 +63,9 @@ def main():
         # Process commands
         await bot.process_commands(message)
 
-        if message.content == '99!':
-            response = "testing!!!!!!!!!!! 99!"
-            await message.channel.send(response)
+        # if message.content == '99!':
+        #     response = "testing!!!!!!!!!!! 99!"
+        #     await message.channel.send(response)
 
     @bot.event
     async def on_error(event, *args, **kwargs):
@@ -80,7 +82,7 @@ def main():
         await ctx.send('error moment')
 
 
-    @bot.command(name='99', help='<3')
+    @bot.command(name='kirito', help='<3')
     async def nine_nine(ctx):
         response = "i love kirito <3"
         await ctx.send(response)
