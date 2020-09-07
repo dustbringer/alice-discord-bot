@@ -24,7 +24,7 @@ def set_cogs(bot):
 
 
 def main():
-    bot = commands.Bot(command_prefix="A.")
+    bot = commands.Bot(command_prefix="a.")
     set_cogs(bot)
 
 
