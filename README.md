@@ -14,3 +14,6 @@ Multi-Purpose Discord Bot
     DISCORD_TOKEN="token string"
     DISCORD_GUILD="server name"
     ```
+
+## Run
+- Just run `bot.py` in root directory
