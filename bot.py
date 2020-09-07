@@ -13,9 +13,20 @@ Example:
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
+ext = [
+    'cogs.basic',
+    'cogs.santa'
+]
+
+def set_cogs(bot):
+    for e in ext:
+        bot.load_extension(e)
+
 
 def main():
     bot = commands.Bot(command_prefix="A.")
+    set_cogs(bot)
+
 
     @bot.event
     async def on_ready():
