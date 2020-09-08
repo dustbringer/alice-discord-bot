@@ -41,6 +41,7 @@ class CopyPastaCog(commands.Cog):
 
                 # Print pasta
                 if cmd in pasta_list.keys():
+                    print(f"Reacted to copypasta {cmd}")
                     pasta = pasta_list[cmd]
                     embd = discord.Embed(title=pasta["name"], description=pasta["content"])
                     await message.channel.send(embed=embd)

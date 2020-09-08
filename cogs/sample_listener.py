@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 
 import discord
 from discord.ext import commands
@@ -31,9 +32,11 @@ class SampleListenerCog(commands.Cog):
                 return
 
             if "kirito" in message.content.lower():
+                print(f"Reacted to kirito at {datetime.now().time()}")
                 emotes = ["💛"]
                 vege = ["🥦", "🥬", "🍆", "🍌"]
                 if "vege" in message.content.lower():
+                    print(f"Reacted to (kirito) vege at {datetime.now().time()}")
                     emotes.extend([random.choice(vege)])
 
                 for r in emotes:

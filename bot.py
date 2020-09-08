@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 
 import discord
 from discord.ext import commands
@@ -30,6 +31,7 @@ def main():
     set_cogs(bot)
 
 
+
     @bot.event
     async def on_ready():
         # Get guild with matching name
@@ -41,6 +43,19 @@ def main():
                 f'{guild.name}(id: {guild.id})\n'
                 f'Guild Size: {len(guild.members)}\n'
             )
+
+        # Setting `Playing ` status
+        playing = ["the Administrator", "Kirito", "Eugeo", "Selka"]
+        await bot.change_presence(activity=discord.Game(name=f"with {random.choice(playing)}"))
+
+        # # Setting `Streaming ` status
+        # await bot.change_presence(activity=discord.Streaming(name="My Stream", url=my_twitch_url))
+
+        # # Setting `Listening ` status
+        # await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
+
+        # # Setting `Watching ` status
+        # await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
 
     @bot.event
     async def on_member_join(member):
