@@ -45,8 +45,9 @@ def main():
             )
 
         # Setting `Playing ` status
-        playing = ["the Administrator", "Kirito", "Eugeo", "Selka"]
-        await bot.change_presence(activity=discord.Game(name=f"with {random.choice(playing)}"))
+        playing = random.choice(["Kirito", "Eugeo", "Selka", "the Administrator"])
+        print(f"Status updated to 'Playing with {playing}'")
+        await bot.change_presence(activity=discord.Game(name=f"with {playing}"))
 
         # # Setting `Streaming ` status
         # await bot.change_presence(activity=discord.Streaming(name="My Stream", url=my_twitch_url))
@@ -95,7 +96,7 @@ def main():
 
 
     @bot.command(name='kirito', help='<3')
-    async def nine_nine(ctx):
+    async def kirito(ctx):
         response = "i love kirito <3"
         await ctx.send(response)
 

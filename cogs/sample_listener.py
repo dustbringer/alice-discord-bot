@@ -32,11 +32,11 @@ class SampleListenerCog(commands.Cog):
                 return
 
             if "kirito" in message.content.lower():
-                print(f"Reacted to kirito at {datetime.now().time()}")
+                print(f"{datetime.now().time()}; Reacted to kirito")
                 emotes = ["💛"]
                 vege = ["🥦", "🥬", "🍆", "🍌"]
                 if "vege" in message.content.lower():
-                    print(f"Reacted to (kirito) vege at {datetime.now().time()}")
+                    print(f"{datetime.now().time()}; Reacted to (kirito) vege")
                     emotes.extend([random.choice(vege)])
 
                 for r in emotes:

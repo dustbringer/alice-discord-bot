@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import discord
 from discord.ext import commands
 
@@ -21,4 +23,5 @@ class BasicCog(commands.Cog):
 
     @commands.command('bruh')
     async def bruh(self, ctx):
+        print(f"{datetime.now().time()}; Reacted to 'a.bruh', sent 'Bruhhhh'")
         await ctx.send("Bruhhhh")

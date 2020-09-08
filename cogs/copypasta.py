@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 
 import discord
 from discord.ext import commands
@@ -36,12 +37,16 @@ class CopyPastaCog(commands.Cog):
             msg = message.content.split(" ")
 
             # Print embedded if exists
-            if msg[0].startswith("pasta."):
+            if msg[0].lower().startswith("pasta."):
                 cmd = msg[0].split(".")[1]
 
                 # Print pasta
+                if cmd == "random":
+                    print(f"{datetime.now().time()}; Reacted to random copypasta")
+                    cmd = random.choice(list(pasta_list))
+
                 if cmd in pasta_list.keys():
-                    print(f"Reacted to copypasta {cmd}")
+                    print(f"{datetime.now().time()}; Reacted to copypasta '{cmd}'")
                     pasta = pasta_list[cmd]
                     embd = discord.Embed(title=pasta["name"], description=pasta["content"])
                     await message.channel.send(embed=embd)
