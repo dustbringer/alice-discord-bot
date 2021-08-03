@@ -4,16 +4,17 @@ import random
 
 import discord
 from discord.ext import commands
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 """
 Example:
 - https://github.com/agubelu/discord-bot-template
 """
 
-load_dotenv()
+# load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
+
 ext = [
     'cogs.basic',
     'cogs.copypasta',
