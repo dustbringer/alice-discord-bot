@@ -94,7 +94,7 @@ def main():
     async def on_command_error(ctx, error):
         await ctx.send('error moment')
 
-
+    # CHANGE Remove this or place in different file
     @bot.command(name='kirito', help='<3')
     async def kirito(ctx):
         response = "i love kirito <3"
