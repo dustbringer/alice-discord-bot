@@ -16,7 +16,7 @@ for (const file of commandFiles) {
   const command = await import(`./commands/${file}`);
   commands.push(command.data.toJSON());
 }
-console.log(commands);
+// console.log(commands);
 
 // Set commands
 const rest = new REST({ version: "9" }).setToken(token);
