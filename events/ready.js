@@ -20,5 +20,5 @@ export const execute = (client) => {
   // Setting 'Playing' status
   const playing = randomChoice(characters); // choose random element
   client.user.setActivity(`with ${playing}`);
-  console.log(`Status updated to 'Playing with ${playing}'`);
+  console.log(`Status updated to 'Playing with ${playing}'\n`);
 };
