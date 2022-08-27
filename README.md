@@ -1,7 +1,8 @@
 # alice-discord-bot
 Multi-Purpose Discord Bot written for Node.js.
 
-## Setup
+## Local
+### Setup
 - Create a `.env` file in the root directory of the repository.
   - `DISCORD_CLIENTID`: The bot's client id.
     - Can be found at DiscordDevelopers > OAuth2 > Client Information > Client ID
@@ -15,5 +16,8 @@ Multi-Purpose Discord Bot written for Node.js.
     ```
 - Run `npm install` in the root folder
 
-## Run
+### Run
 - Run `npm start` to start the server
+
+## Deployment
+Set up the environment variables at the host (e.g. fly.io secrets). If you have set it up locally, make sure the `.env` file is ignored in deployment (e.g. using `.dockerignore` for fly.io).
