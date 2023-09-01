@@ -17,8 +17,10 @@ export const execute = (client) => {
 
   console.log("");
 
-  // Setting 'Playing' status
-  const playing = randomChoice(characters); // choose random element
-  client.user.setActivity(`with ${playing}`);
-  console.log(`Status updated to 'Playing with ${playing}'\n`);
+  // Setting 'Playing' status every hour
+  setInterval(() => {
+    const playing = randomChoice(characters); // choose random element
+    client.user.setActivity(`with ${playing}`);
+    console.log(`Status updated to 'Playing with ${playing}'\n`);
+  }, 3600000);
 };
