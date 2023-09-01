@@ -21,3 +21,5 @@ Multi-Purpose Discord Bot written for Node.js.
 
 ## Deployment
 Set up the environment variables at the host (e.g. fly.io secrets). If you have set it up locally, make sure the `.env` file is ignored in deployment (e.g. using `.dockerignore` for fly.io).
+
+For fly.io, run `fly deploy`. (Probably should run `fly launch` for the first deployment)
