@@ -1,4 +1,5 @@
 import { randomChoice } from "../util/arrayUtil.js";
+import { setIntervalAndStart } from "../util/timers.js";
 import { characters } from "../data/constants.js";
 
 export const name = "ready";
@@ -18,7 +19,7 @@ export const execute = (client) => {
   console.log("");
 
   // Setting 'Playing' status every hour
-  setInterval(() => {
+  setIntervalAndStart(() => {
     const playing = randomChoice(characters); // choose random element
     client.user.setActivity(`with ${playing}`);
     console.log(`Status updated to 'Playing with ${playing}'\n`);
